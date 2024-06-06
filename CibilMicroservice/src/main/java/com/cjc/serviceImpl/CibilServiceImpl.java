@@ -9,8 +9,6 @@ import com.cjc.serviceI.CibilServiceI;
 
 @Service
 public class CibilServiceImpl implements CibilServiceI {
-	
-	//@Autowired CibilRepository cr;
 
 	Random ramdom = new Random();
 	String cibilId = "CIBIL";
@@ -22,7 +20,6 @@ public class CibilServiceImpl implements CibilServiceI {
 		int nextInt = ramdom.nextInt(500, 999);
 		String newId = cibilId + nextInt;
 		cibilDetails.setCibil_Id(newId);
-		
 
 		int score = ramdom.nextInt(300, 900);
 		cibilDetails.setCibil_score(score);
@@ -35,16 +32,12 @@ public class CibilServiceImpl implements CibilServiceI {
 			cibilDetails.setRemark("Average");
 		} else {
 			cibilDetails.setRemark("Poor");
-
 		}
-
 		if (score >= 550) {
 			cibilDetails.setApplicable(true);
 		} else {
 			cibilDetails.setApplicable(false);
 		}
-		//cr.save(cibilDetails);
-
 		return cibilDetails;
 	}
 }
