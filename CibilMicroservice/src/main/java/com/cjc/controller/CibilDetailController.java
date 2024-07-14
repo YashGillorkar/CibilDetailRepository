@@ -12,6 +12,10 @@ import com.cjc.serviceI.CibilServiceI;
 @RestController
 public class CibilDetailController {
 	
+//	API stubbing is a technique used in software development and testing,
+//	where a dummy or placeholder implementation of
+//	API responses is used as a temporary substitute for the actual API.
+	
 	@Autowired CibilServiceI csi;
 	
 	@GetMapping("/sendCibilDetails")
